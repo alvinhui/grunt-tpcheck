@@ -1,0 +1,42 @@
+{
+  "name": "grunt-tpcheck",
+  "description": "template check plugin",
+  "version": "0.1.0",
+  "homepage": "https://github.com/alvinhui/grunt-tpcheck",
+  "author": {
+    "name": "Alvin Hui",
+    "email": "alvinxu@outlook.com",
+    "url": "alvinhui.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github/alvinhui/grunt-tpcheck.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alvinhui/grunt-tpcheck/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/alvinhui/grunt-tpcheck/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}

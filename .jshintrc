@@ -1,0 +1,8 @@
+{
+  "node": true, // 关闭严格模式校验
+  "globals": { // 定义全局变量白名单（告诉jsHint不需要校验它们）
+    "require": true,
+    "module": true,
+    "exports": true
+  }
+}

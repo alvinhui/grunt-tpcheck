@@ -1,0 +1,6 @@
+#parse('item/hi.vm')testst
+
+
+$control.setTemplate('test/test.vm');
+$control.setTemplate('vmcommon/test/test.vm');
+$control.setTemplate('test111/test.vm');

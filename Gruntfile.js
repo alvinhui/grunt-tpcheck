@@ -29,22 +29,33 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    tpcheck: {
-      default_options: {
+    tpcheckinclude: {
+      parse: {
         options: {
+          rootPath: 'test/fixtures/include/',
+          regular: /#parse\((['"])([^(\1)]+)\1\)/g
         },
-        files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
+        src: 'test/fixtures/include/**/*.vm'
       },
-      custom_options: {
+      control: {
         options: {
-          separator: ': ',
-          punctuation: ' !!!'
+          rootPath: 'test/fixtures/include/',
+          regular: /\$control\.setTemplate\((['"])([^(\1)]+)\1\)/g,
+          pathPre: 'control/',
+          judge: function (re){
+            return re.indexOf('vmcommon')!==0;
+          }
         },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
+        src: 'test/fixtures/include/**/*.vm'
+      }
+    },
+
+    tpcheckencoding: {
+      all: {
+        options: {
+          rules: ['iso-8859-1','charset=us-ascii']
+        },
+        src: 'test/fixtures/encoding/**/*.vm'
       }
     },
 
@@ -65,9 +76,9 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'tpcheck', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'tpcheckinclude', 'nodeunit']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'test']);
+  grunt.registerTask('default', ['jshint', 'tpcheckinclude', 'tpcheckencoding']);
 
 };

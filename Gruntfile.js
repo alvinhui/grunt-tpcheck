@@ -59,6 +59,15 @@ module.exports = function(grunt) {
       }
     },
 
+    tpchecknote: {
+      all: {
+        options: {
+          typeNote: '@type'
+        },
+        src: 'test/fixtures/note/**/*.vm'
+      }
+    },
+
     // Unit tests.
     nodeunit: {
       tests: ['test/*_test.js']
@@ -79,6 +88,6 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['clean', 'tpcheckinclude', 'nodeunit']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'tpcheckinclude', 'tpcheckencoding']);
+  grunt.registerTask('default', ['jshint', 'tpcheckinclude', 'tpcheckencoding', 'tpchecknote']);
 
 };

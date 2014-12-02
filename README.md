@@ -61,12 +61,16 @@ grunt.initConfig({
   Type: `Array`
   Default value: `['utf-8']`
 
+#### tpchecknote
+
+
+1. typeNote
+  Type: `string`
+  Default value: `@type`
+
 ### Usage Examples
 
-#### Default Options
-
-#### Custom Options
-
+see Gruntfile.js
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).

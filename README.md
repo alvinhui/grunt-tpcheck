@@ -47,6 +47,8 @@ grunt.initConfig({
 
 #### tpcheckinclude
 
+Check the include path exists
+
 1. rootPath
   Type: `String`
   Default value: `''`
@@ -56,6 +58,7 @@ grunt.initConfig({
 
 #### tpcheckencoding
 
+Check the file encoding
 
 1. rules
   Type: `Array`

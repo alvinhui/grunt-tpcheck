@@ -1,7 +1,7 @@
 {
   "name": "grunt-tpcheck",
   "description": "template check plugin",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "homepage": "https://github.com/alvinhui/grunt-tpcheck",
   "author": {
     "name": "Alvin Hui",
@@ -34,7 +34,7 @@
     "grunt": "~0.4.5"
   },
   "dependencies": {
-    "tpcheck": "~0.3.2"
+    "tpcheck": "~0.4.2"
   },
   "peerDependencies": {
     "grunt": "~0.4.5"
